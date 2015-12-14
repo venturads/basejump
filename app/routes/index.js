@@ -35,7 +35,10 @@ module.exports = function (app, passport) {
 		.get(isLoggedIn, function (req, res) {
 			res.sendFile(path + '/public/profile.html');
 		});
-
+	app.route('/makevoting')
+		.get(isLoggedIn, function (req, res) {
+			res.sendFile(path + '/public/makevoting.html');
+		});
 	app.route('/api/:id')
 		.get(isLoggedIn, function (req, res) {
 			res.json(req.user.github);
@@ -53,5 +56,6 @@ module.exports = function (app, passport) {
 	app.route('/api/:id/clicks')
 		.get(isLoggedIn, clickHandler.getClicks)
 		.post(isLoggedIn, clickHandler.addClick)
+		.post(isLoggedIn, clickHandler.addPoll)
 		.delete(isLoggedIn, clickHandler.resetClicks);
 };

@@ -98,10 +98,17 @@ header a ~ p {
 }
 
 /****** Logo Div Styling ******/
+#pollgroup{
+	
+	display:block;
+	text-align:center;
+}
 
 img {
 	margin: 0 auto;
 	display: block;
+	width:150px;
+	height:150px;
 }
 
 .clementine-text { /* Styling for the Clementine.js text */
@@ -143,8 +150,8 @@ img {
 }
 
 .btn-delete {	/* Styling for delete button */
-	background-color: #ECEFF1;
-	color: #212121;
+	background-color: lightcoral;
+	color: white;
 }
 
 #click-nbr {
@@ -201,4 +208,7 @@ span {
 	color: #FFFFFF;
 	display: inline;
 	margin: 0;
+}
+form{
+	text-align:center;
 }
